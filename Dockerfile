@@ -1,4 +1,5 @@
-FROM gnuradio
+ARG ARCH=
+FROM gnuradio:${ARCH}
 
 RUN mkdir -p /src
 WORKDIR /src
@@ -24,4 +25,3 @@ RUN rm -rf bladeRF gr-osmosdr && mkdir /bladeRF-images && cd /bladeRF-images && 
     wget https://www.nuand.com/fpga/hostedxA9-latest.rbf && \
     wget https://www.nuand.com/fpga/hostedx40-latest.rbf && \
     wget https://www.nuand.com/fpga/hostedx115-latest.rbf
-
