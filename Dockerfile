@@ -1,5 +1,5 @@
 ARG ARCH=
-FROM gnuradio:${ARCH}
+FROM tclarke/gnuradio:${ARCH}
 
 RUN mkdir -p /src
 WORKDIR /src
